@@ -5,13 +5,17 @@ import { CATEGORIES } from '../../../constants'
 
 function Categories() {
   return (
-    <ul className="categories">
-      {CATEGORIES.map(category => (
-        <li key={category.id}>
-          <Link to={category.route}>{category.name}</Link>
-        </li>
-      ))}
-    </ul>
+    <nav className="categories">
+      <ul>
+        {CATEGORIES.map(category => (
+          <li key={category.id}>
+            <Link to={category.route} className="category">
+              {category.name}
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
   )
 }
 

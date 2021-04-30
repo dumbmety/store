@@ -2,10 +2,10 @@
   @apply flex-1;
 }
 
-.categories li a {
+.category {
   @apply py-3 px-6 block text-gray select-none;
 }
 
-.categories li a:hover {
+.category:hover {
   @apply bg-cool;
 }
