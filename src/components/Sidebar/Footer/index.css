@@ -1,0 +1,15 @@
+.main-footer {
+  @apply p-6 flex items-center;
+}
+
+.main-footer .logo {
+  @apply w-10 mr-2 rounded;
+}
+
+.main-footer .name {
+  @apply font-semibold flex-1 text-sm;
+}
+
+.main-footer .button {
+  @apply outline-none;
+}

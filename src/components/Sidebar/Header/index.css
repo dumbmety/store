@@ -1,0 +1,7 @@
+.main-header {
+  @apply p-6;
+}
+
+.main-header h1 {
+  @apply text-3xl font-semibold;
+}
