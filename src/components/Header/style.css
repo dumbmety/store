@@ -1,0 +1,4 @@
+.products-header {
+  @apply flex justify-between items-center;
+}
+
