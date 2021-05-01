@@ -1,4 +1,4 @@
-export const CATEGORIES = [
+const categories = [
   {
     id: 1,
     name: 'Digital',
@@ -30,3 +30,5 @@ export const CATEGORIES = [
     route: '/stationery',
   },
 ]
+
+export default categories

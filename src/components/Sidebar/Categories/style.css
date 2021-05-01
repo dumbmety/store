@@ -1,0 +1,7 @@
+.categories {
+  @apply flex-1;
+}
+
+.category {
+  @apply py-3 px-6 block select-none text-gray hover:bg-cool;
+}

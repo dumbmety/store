@@ -1,13 +1,13 @@
-import './index.css'
+import './style.css'
 
 import { Link } from 'react-router-dom'
-import { CATEGORIES } from '../../../constants'
+import categories from '../../../constants/categories'
 
 function Categories() {
   return (
     <nav className="categories">
       <ul>
-        {CATEGORIES.map(category => (
+        {categories.map(category => (
           <li key={category.id}>
             <Link to={category.route} className="category">
               {category.name}

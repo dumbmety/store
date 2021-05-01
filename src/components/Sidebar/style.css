@@ -1,0 +1,7 @@
+.sidebar {
+  @apply w-72 hidden md:block bg-light;
+}
+
+.sidebar .content {
+  @apply hidden md:flex flex-col h-screen;
+}

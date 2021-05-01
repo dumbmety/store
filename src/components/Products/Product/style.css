@@ -1,0 +1,35 @@
+.product {
+  @apply p-3 relative transition rounded-lg hover:bg-light;
+}
+
+.product .route {
+  @apply absolute top-0 left-0 w-full h-full;
+}
+
+.product .image {
+  @apply w-full rounded-lg;
+}
+
+.product .details {
+  @apply mt-2 flex justify-between;
+}
+
+.product .details .name {
+  @apply text-lg font-semibold;
+}
+
+.product .details .price {
+  @apply text-gray;
+}
+
+.product .details .status {
+  @apply w-2 h-2 mt-2 rounded-full;
+}
+
+.product .details .status.available {
+  @apply bg-green;
+}
+
+.product .details .status.unavailable {
+  @apply bg-cool;
+}
