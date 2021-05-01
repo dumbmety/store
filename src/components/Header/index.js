@@ -1,13 +1,14 @@
-import Actions from "./Actions";
-import Searchbar from "./Searchbar";
+import Actions from './Actions'
+import Searchbar from './Searchbar'
 import './style.css'
-const header = () => {
+const header = props => {
+  const { setGridView, GridView } = props
   return (
-    <header className='products-header'>
+    <header className="products-header">
       <Searchbar />
-      <Actions />
+      <Actions GridView={GridView} setGridView={setGridView} />
     </header>
-  );
-};
+  )
+}
 
 export default header

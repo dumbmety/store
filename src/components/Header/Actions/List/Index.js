@@ -1,10 +1,13 @@
 import { ViewListIcon } from '@heroicons/react/outline'
 const list = props => {
-  const { active } = props
+  const { GridView, setGridView } = props
   return (
-    <li className={`mr-1 ${active ? 'curser-normal' : 'cursor-pointer'}`}>
+    <li
+      onClick={() => setGridView(false)}
+      className={`mr-1 ${GridView ? 'cursor-pointer' : 'curser-normal'}`}
+    >
       <ViewListIcon
-        className={`${active ? 'text-black' : 'text-cool'} w-7 h-7 mr-4`}
+        className={`${GridView ? 'text-cool' : 'text-black'} w-7 h-7 mr-4`}
       />
     </li>
   )

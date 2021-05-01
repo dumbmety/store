@@ -1,9 +1,14 @@
 import { ViewGridIcon } from '@heroicons/react/outline'
 const grid = props => {
-  const { active } = props;
+  const { setGridView, GridView } = props
   return (
-    <li className={`mr-1 ${active ? 'curser-normal' : 'cursor-pointer'}`}>
-      <ViewGridIcon className={`${active ? 'text-black' : 'text-cool' } w-7 h-7 `} />
+    <li
+      onClick={() => setGridView(true)}
+      className={`mr-1 ${GridView ? 'curser-normal' : 'cursor-pointer'}`}
+    >
+      <ViewGridIcon
+        className={`${GridView ? 'text-black' : 'text-cool'} w-7 h-7 `}
+      />
     </li>
   )
 }

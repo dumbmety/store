@@ -1,12 +1,13 @@
-import Grid from "./Grid/Index"
-import List from "./List/Index"
+import Grid from './Grid/Index'
+import List from './List/Index'
 import './style.css'
-const actions = () => {
+const actions = props => {
+  const { setGridView, GridView } = props
   return (
-    <nav className='product-header__actions'>
+    <nav className="hidden md:block product-header__actions">
       <ul>
-        <List />
-        <Grid active />
+        <Grid GridView={GridView} setGridView={setGridView} />
+        <List GridView={GridView} setGridView={setGridView} />
       </ul>
     </nav>
   )

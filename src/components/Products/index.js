@@ -3,9 +3,16 @@ import './style.css'
 import products from '../../constants/products'
 import Product from './Product'
 
-function Products() {
+const Products = props => {
+  const { GridView } = props
   return (
-    <ul className="products">
+    <ul
+      className={`products ${
+        GridView
+          ? 'grid gap-4 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'
+          : 'grid grid-cols-1 gap-4'
+      }`}
+    >
       {products.map(product => (
         <Product
           key={product.id}
@@ -14,6 +21,7 @@ function Products() {
           status={product.status}
           image={product.image}
           route={product.route}
+          GridView={GridView}
         />
       ))}
     </ul>

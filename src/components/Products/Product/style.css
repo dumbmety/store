@@ -7,7 +7,7 @@
 }
 
 .product .image {
-  @apply w-full rounded-lg;
+  @apply w-full rounded-lg lg:max-w-xs;
 }
 
 .product .details {
