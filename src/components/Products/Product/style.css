@@ -2,34 +2,67 @@
   @apply p-3 relative transition rounded-lg hover:bg-light;
 }
 
+.product.list {
+  @apply lg:flex h-full;
+  min-height: 9rem;
+}
+
 .product .route {
   @apply absolute top-0 left-0 w-full h-full;
 }
 
 .product .image {
-  @apply w-full rounded-lg lg:max-w-xs;
+  @apply w-full h-full object-cover rounded-lg lg:max-w-xs;
 }
 
-.product .details {
+.product.list .image {
+  @apply lg:w-52;
+}
+
+.product .info {
   @apply mt-2 flex justify-between;
 }
 
-.product .details .name {
+.product.list .info {
+  @apply lg:mt-0 lg:ml-4;
+}
+
+.product.list .info > div {
+  @apply flex flex-col;
+}
+
+.product .info .name {
   @apply text-lg font-semibold;
 }
 
-.product .details .price {
+.product .info .description {
+  @apply w-full lg:w-5/6 flex-1 text-gray;
+}
+
+.product .info .price {
   @apply text-gray;
 }
 
-.product .details .status {
+.product.list .info .details {
+  @apply mt-5 lg:mt-0 flex items-center;
+}
+
+.product.list .info .details .status {
+  @apply m-0 mr-3;
+}
+
+.product .info .status {
   @apply w-2 h-2 mt-2 rounded-full;
 }
 
-.product .details .status.available {
+.product.list .info .status {
+  @apply ml-1;
+}
+
+.product .info .status.available {
   @apply bg-green;
 }
 
-.product .details .status.unavailable {
+.product .info .status.unavailable {
   @apply bg-cool;
 }

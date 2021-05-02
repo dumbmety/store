@@ -1,16 +1,20 @@
+import { useContext } from 'react'
 import { ViewGridIcon } from '@heroicons/react/outline'
-const grid = props => {
-  const { setGridView, GridView } = props
+
+import LayoutContext from '../../../../providers/layout'
+
+function Grid() {
+  const { layout, changeLayout } = useContext(LayoutContext)
+
   return (
-    <li
-      onClick={() => setGridView(true)}
-      className={`mr-1 ${GridView ? 'curser-normal' : 'cursor-pointer'}`}
-    >
+    <li onClick={() => changeLayout('grid')} className="mr-1 cursor-pointer">
       <ViewGridIcon
-        className={`${GridView ? 'text-black' : 'text-cool'} w-7 h-7 `}
+        className={`w-7 h-7 transition duration-200 ${
+          layout === 'grid' ? 'text-black' : 'text-cool'
+        }`}
       />
     </li>
   )
 }
 
-export default grid
+export default Grid

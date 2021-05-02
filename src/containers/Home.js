@@ -1,17 +1,27 @@
+import { useState } from 'react'
+
 import Main from '../components/Main'
 import Products from '../components/Products'
 import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
-import { useState } from 'react'
+
+import LayoutContext from '../providers/layout'
 
 function Home() {
-  const [GridView, setGridView] = useState(true)
+  const [layout, setLayout] = useState('grid')
+
+  function changeLayout(layout) {
+    setLayout(layout)
+  }
+
   return (
     <div className="flex">
       <Sidebar />
       <Main>
-        <Header GridView={GridView} setGridView={setGridView} />
-        <Products GridView={GridView} />
+        <LayoutContext.Provider value={{ layout, changeLayout }}>
+          <Header />
+          <Products />
+        </LayoutContext.Provider>
       </Main>
     </div>
   )
