@@ -1,0 +1,7 @@
+.content {
+  @apply flex-1;
+}
+
+.content .scroll {
+  @apply p-5 lg:p-10 max-h-screen;
+}

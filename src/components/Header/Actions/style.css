@@ -1,0 +1,3 @@
+.product-header__actions ul {
+  @apply flex
+}
