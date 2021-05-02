@@ -1,0 +1,7 @@
+.main-nav {
+  @apply fixed z-50 right-0 left-0 md:hidden bg-cool flex items-center justify-between p-6;
+}
+
+.main-nav h1 {
+  @apply text-3xl font-semibold;
+}

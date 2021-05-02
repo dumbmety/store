@@ -1,0 +1,5 @@
+.backdrop {
+  background-color: rgba(32, 32, 32, 0.404);
+  z-index: 99;
+  @apply w-full h-full fixed top-0 left-0;
+}
