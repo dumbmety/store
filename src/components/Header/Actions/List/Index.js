@@ -3,7 +3,7 @@ import { ViewListIcon } from '@heroicons/react/outline'
 
 import LayoutContext from '../../../../providers/layout'
 
-function List() {
+const List = () => {
   const { layout, changeLayout } = useContext(LayoutContext)
 
   return (

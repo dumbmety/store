@@ -3,7 +3,7 @@ import { ViewGridIcon } from '@heroicons/react/outline'
 
 import LayoutContext from '../../../../providers/layout'
 
-function Grid() {
+const Grid = () => {
   const { layout, changeLayout } = useContext(LayoutContext)
 
   return (
