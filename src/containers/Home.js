@@ -1,5 +1,3 @@
-import { useState } from 'react'
-
 import Main from '../components/Main'
 import Products from '../components/Products'
 import Sidebar from '../components/Sidebar'
@@ -9,21 +7,15 @@ import LayoutContext from '../providers/layout'
 import Navbar from '../components/Navbar'
 
 function Home() {
-  const [layout, setLayout] = useState('grid')
-
-  function changeLayout(layout) {
-    setLayout(layout)
-  }
-
   return (
     <div className="flex">
       <Sidebar />
       <Navbar />
       <Main>
-        <LayoutContext.Provider value={{ layout, changeLayout }}>
+        <LayoutContext>
           <Header />
           <Products />
-        </LayoutContext.Provider>
+        </LayoutContext>
       </Main>
     </div>
   )

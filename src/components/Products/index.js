@@ -1,13 +1,11 @@
 import './style.css'
-import { useContext } from 'react'
-
-import products from '../../constants/products'
 
 import Product from './Product'
-import LayoutContext from '../../providers/layout'
+import products from '../../constants/products'
+import { useLayoutContext } from '../../providers/layout'
 
 function Products() {
-  const { layout } = useContext(LayoutContext)
+  const { layout } = useLayoutContext()
 
   return (
     <ul

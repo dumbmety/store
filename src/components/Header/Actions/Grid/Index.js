@@ -1,10 +1,8 @@
-import { useContext } from 'react'
 import { ViewGridIcon } from '@heroicons/react/outline'
-
-import LayoutContext from '../../../../providers/layout'
+import { useLayoutContext } from '../../../../providers/layout'
 
 function Grid() {
-  const { layout, changeLayout } = useContext(LayoutContext)
+  const { layout, changeLayout } = useLayoutContext()
 
   return (
     <li onClick={() => changeLayout('grid')} className="mr-1 cursor-pointer">

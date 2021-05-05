@@ -1,13 +1,11 @@
 import './style.css'
-import { useContext } from 'react'
-
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import LayoutContext from '../../../providers/layout'
+import { useLayoutContext } from '../../../providers/layout'
 
 function Product({ name, price, status, image, route, description }) {
-  const { layout } = useContext(LayoutContext)
+  const { layout } = useLayoutContext()
 
   return (
     <li className={`product ${layout === 'list' && 'list'}`}>
