@@ -11,8 +11,12 @@
   @apply absolute top-0 left-0 w-full h-full;
 }
 
-.product .image {
-  @apply w-full h-full object-cover rounded-lg lg:max-w-xs;
+.product .image-wrapper {
+  @apply p-4;
+}
+
+.product .image-wrapper .image {
+  @apply w-full h-40 mx-auto object-contain rounded-lg lg:max-w-xs;
 }
 
 .product.list .image {
