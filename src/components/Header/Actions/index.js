@@ -5,7 +5,7 @@ import List from './List'
 
 function Actions() {
   return (
-    <nav className="hidden md:block product-header__actions">
+    <nav className="hidden md:flex product-header__actions">
       <ul>
         <Grid />
         <List />
