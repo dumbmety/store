@@ -1,14 +1,14 @@
-import classes from '../style.module.css'
+import classes from './style.module.css'
 
-const Login = () => {
+const Signup = () => {
   return (
     <section className={classes.AuthContainer}>
       <header className={classes.Header}>
-        <h1>Login</h1>
+        <h1>SignUp</h1>
       </header>
       <div className={classes.Content}>
         <div className={classes.Image}>
-          <img src="/images/auth.svg" alt="" />
+          <img src="/images/auth.svg" alt="Authentication" />
         </div>
         <form className={classes.Form}>
           <div className={classes.FormGroup}>
@@ -16,7 +16,11 @@ const Login = () => {
             <input type="text" name="username" placeholder="Enter username" />
           </div>
           <div className={classes.FormGroup}>
-            <label htmlFor="password">password</label>
+            <label htmlFor="email">Email</label>
+            <input type="email" name="email" placeholder="Enter email" />
+          </div>
+          <div className={classes.FormGroup}>
+            <label htmlFor="password">Password</label>
             <input
               type="password"
               name="password"
@@ -24,9 +28,7 @@ const Login = () => {
             />
           </div>
           <div className={classes.FormGroup}>
-            <button type="submit" className="btn">
-              Login
-            </button>
+            <button>Sign up</button>
           </div>
         </form>
       </div>
@@ -34,4 +36,4 @@ const Login = () => {
   )
 }
 
-export default Login
+export default Signup

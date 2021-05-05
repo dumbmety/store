@@ -1,14 +1,14 @@
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import Auth from '../components/Auth'
 
 import Home from './Home'
+import Auth from './Auth'
 
 function App() {
   return (
     <Router>
       <Switch>
+        <Route path="/auth" component={Auth} />
         <Route path="/" exact component={Home} />
-        <Route path="/auth" exact component={Auth} />
       </Switch>
     </Router>
   )
