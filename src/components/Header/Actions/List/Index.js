@@ -1,8 +1,8 @@
 import { ViewListIcon } from '@heroicons/react/outline'
-import { useLayoutContext } from '../../../../providers/layout'
+import { useDataHandler } from '../../../../providers/layout'
 
 function List() {
-  const { layout, changeLayout } = useLayoutContext()
+  const { layout, changeLayout } = useDataHandler()
 
   return (
     <li onClick={() => changeLayout('list')} className="mr-1 cursor-pointer">

@@ -1,11 +1,11 @@
 import { createContext, useContext, useState } from 'react'
 
-const LayoutContext = createContext({
+const Context = createContext({
   layout: '',
   changeLayout: () => {},
 })
 
-const LayoutProvider = ({ children }) => {
+const Provider = ({ children }) => {
   const [layout, setLayout] = useState('grid')
 
   const changeLayout = layout => {
@@ -13,14 +13,14 @@ const LayoutProvider = ({ children }) => {
   }
 
   return (
-    <LayoutContext.Provider value={{ layout, changeLayout }}>
+    <Context.Provider value={{ layout, changeLayout }}>
       {children}
-    </LayoutContext.Provider>
+    </Context.Provider>
   )
 }
 
-export const useLayoutContext = () => {
-  return useContext(LayoutContext)
+export const useDataHandler = () => {
+  return useContext(Context)
 }
 
-export default LayoutProvider
+export default Provider

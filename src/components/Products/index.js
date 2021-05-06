@@ -2,10 +2,10 @@ import './style.css'
 
 import Product from './Product'
 import products from '../../constants/products'
-import { useLayoutContext } from '../../providers/layout'
+import { useDataHandler } from '../../providers/layout'
 
 function Products() {
-  const { layout } = useLayoutContext()
+  const { layout } = useDataHandler()
 
   return (
     <ul

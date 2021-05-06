@@ -1,8 +1,8 @@
 import { ViewGridIcon } from '@heroicons/react/outline'
-import { useLayoutContext } from '../../../../providers/layout'
+import { useDataHandler } from '../../../../providers/layout'
 
 function Grid() {
-  const { layout, changeLayout } = useLayoutContext()
+  const { layout, changeLayout } = useDataHandler()
 
   return (
     <li onClick={() => changeLayout('grid')} className="mr-1 cursor-pointer">

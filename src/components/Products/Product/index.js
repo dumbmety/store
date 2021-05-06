@@ -2,10 +2,10 @@ import './style.css'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 
-import { useLayoutContext } from '../../../providers/layout'
+import { useDataHandler } from '../../../providers/layout'
 
 function Product({ name, price, status, image, route, description }) {
-  const { layout } = useLayoutContext()
+  const { layout } = useDataHandler()
 
   return (
     <li className={`product ${layout === 'list' && 'list'}`}>
