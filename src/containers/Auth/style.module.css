@@ -5,7 +5,6 @@
 .login {
   @apply flex items-center justify-center mt-2 relative z-30 transition-all ease-in-out duration-300;
   width: 27em;
-  height: 40em;
 }
 
 .login.right {
