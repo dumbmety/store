@@ -28,7 +28,7 @@ const Signup = () => {
             />
           </div>
           <div className={classes.FormGroup}>
-            <button>Sign up</button>
+            <button type="submit">Sign up</button>
           </div>
         </form>
       </div>
