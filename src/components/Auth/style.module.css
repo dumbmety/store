@@ -23,6 +23,9 @@
   @apply mb-1 text-lg font-medium;
 }
 
+.ErrorMessage {
+  @apply text-orange;
+}
 .FormGroup input {
   @apply p-2 w-full border border-cool shadow-sm focus:border-purple focus:ring-2 focus:ring-purple outline-none rounded-md transition duration-300 ease-in-out;
 }
