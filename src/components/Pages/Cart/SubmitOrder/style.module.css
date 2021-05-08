@@ -1,0 +1,14 @@
+.SubmitOrder {
+  @apply flex flex-col container items-end mx-auto mt-5;
+}
+
+.TotalPrice {
+  @apply flex items-center text-3xl font-medium;
+}
+
+.TotalPrice span {
+  @apply text-4xl font-bold text-purple ml-1;
+}
+.OrderButton {
+  @apply bg-purple text-2xl text-white rounded-full mt-5 px-4 py-2 focus:outline-none;
+}

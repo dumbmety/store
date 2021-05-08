@@ -1,5 +1,5 @@
 .Title {
-  @apply flex text-3xl font-bold items-center border-b-2 border-cool pb-5
+  @apply flex text-3xl font-bold items-center pb-5
 }
 .Title h1 {
   @apply ml-2

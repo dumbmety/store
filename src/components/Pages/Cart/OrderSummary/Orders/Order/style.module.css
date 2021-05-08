@@ -15,7 +15,7 @@
 .ProductName,
 .ProductCatefory,
 .ProductPrice {
-  @apply text-2xl font-medium;
+  @apply text-2xl font-medium capitalize;
 }
 .ProductStatus {
   @apply text-lg;
