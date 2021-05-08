@@ -1,0 +1,25 @@
+.NavItems,
+.NavItem {
+  @apply flex items-center;
+}
+
+.Nav {
+  @apply p-3 border-b-2 border-cool;
+}
+
+/* .NavItems {
+  @apply items-center
+} */
+
+.NavItem:not(:last-child) {
+  @apply mr-6 text-xl;
+}
+.CartButton {
+  @apply flex items-center bg-purple px-3 py-2 text-white rounded-full text-sm cursor-pointer;
+}
+.CartButton span {
+  @apply mr-1 text-xl;
+}
+.NavLogo {
+  @apply text-3xl font-medium;
+}

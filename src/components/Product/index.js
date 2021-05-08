@@ -25,7 +25,9 @@ function Product({ match }) {
           <h1 className="name">{product.name}</h1>
           <span className="price">${product.price}</span>
           <p className="description">{product.description}</p>
-          <button className="add-to-cart">Add to cart</button>
+          <Link to="/cart" className="add-to-cart">
+            Add to cart
+          </Link>
         </div>
       </div>
     </SimpleBar>
