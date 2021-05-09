@@ -1,21 +1,20 @@
 .NavItems,
 .NavItem {
-  @apply flex items-center;
+  @apply lg:flex items-center;
 }
 
 .Nav {
-  @apply p-3 border-b-2 border-cool;
+  @apply bg-cool lg:bg-white flex lg:block justify-between lg:justify-start items-center p-6 p-3 border-b-2 border-cool;
 }
-
-/* .NavItems {
-  @apply items-center
-} */
+.NavItems {
+  @apply flex-1 lg:flex-none;
+}
 
 .NavItem:not(:last-child) {
-  @apply mr-6 text-xl;
+  @apply p-2 lg:p-0 px-6 lg:mr-6 text-lg text-gray lg:text-xl hover:bg-cool lg:hover:bg-white;
 }
 .CartButton {
-  @apply flex items-center bg-purple px-3 py-2 text-white rounded-full text-sm cursor-pointer;
+  @apply p-2 mt-10 lg:mt-0 mx-6 lg:mx-1 px-2 flex items-center justify-between lg:justify-center bg-purple py-2 text-white lg:rounded-full text-sm cursor-pointer;
 }
 .CartButton span {
   @apply mr-1 text-xl;
