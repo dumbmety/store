@@ -1,0 +1,33 @@
+.Order {
+  @apply flex items-center justify-between mt-10;
+}
+.LeftSide {
+  @apply flex flex-1;
+}
+
+.ProductImage {
+  @apply lg:w-52 w-28;
+}
+
+.ProductNameWrapper {
+  @apply flex flex-col justify-center ml-5;
+}
+.ProductName,
+.ProductCatefory,
+.ProductPrice {
+  @apply text-lg lg:text-2xl font-medium capitalize;
+}
+.ProductStatus {
+  @apply text-sm lg:text-lg ;
+}
+
+.ProductStatus.Available {
+  @apply text-green;
+}
+
+.ProductStatus.Unavailable {
+  @apply text-cool;
+}
+.RightSide {
+  @apply flex justify-around lg:justify-between flex-1;
+}

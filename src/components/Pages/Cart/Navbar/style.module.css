@@ -1,0 +1,24 @@
+.NavItems,
+.NavItem {
+  @apply lg:flex items-center;
+}
+
+.Nav {
+  @apply bg-cool lg:bg-white flex lg:block justify-between lg:justify-start items-center p-6 p-3 border-b-2 border-cool;
+}
+.NavItems {
+  @apply flex-1 lg:flex-none;
+}
+
+.NavItem:not(:last-child) {
+  @apply p-2 lg:p-0 px-6 lg:mr-6 text-lg text-gray lg:text-xl hover:bg-cool lg:hover:bg-white;
+}
+.CartButton {
+  @apply p-2 mt-5 lg:mt-0 mx-6 lg:mx-1 px-2 flex items-center justify-start lg:justify-center bg-purple py-2 text-white lg:rounded-full text-sm cursor-pointer;
+}
+.CartButton span {
+  @apply mr-1 text-xl;
+}
+.NavLogo {
+  @apply text-3xl font-medium;
+}

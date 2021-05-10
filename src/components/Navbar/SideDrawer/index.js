@@ -1,9 +1,6 @@
-import Categories from '../../Sidebar/Categories'
-import Footer from '../../Sidebar/Footer'
-import Header from '../../Sidebar/Header'
 import './style.css'
 const SideDrawer = props => {
-  const { show } = props
+  const { show, children} = props
 
   let classes = ['sidedrawer', 'close'] //close: transform: translateX(-160%);
 
@@ -13,11 +10,7 @@ const SideDrawer = props => {
 
   return (
     <aside className={classes.join(' ')}>
-      <div className="content">
-        <Header />
-        <Categories />
-        <Footer />
-      </div>
+      {children}
     </aside>
   )
 }
