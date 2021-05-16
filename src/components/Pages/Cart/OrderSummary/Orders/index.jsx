@@ -10,6 +10,7 @@ const Orders = () => {
           if (index > 1) return
           return (
             <Order
+              key={index}
               name={product.name}
               image={product.image}
               status={product.status}
