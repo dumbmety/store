@@ -10,7 +10,7 @@ function Product({ match }) {
 
   useEffect(() => {
     setProduct(products.find(p => p.route === match.params.name))
-  }, [])
+  }, [setProduct, match.params.name])
 
   return (
     <SimpleBar className="max-h-screen">

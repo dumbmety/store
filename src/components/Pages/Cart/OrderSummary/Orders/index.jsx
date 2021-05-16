@@ -7,7 +7,7 @@ const Orders = () => {
     <section className={classes.Orders}>
       <ul>
         {products.map((product, index) => {
-          if (index > 1) return
+          if (index > 1) return false
           return (
             <Order
               key={index}
