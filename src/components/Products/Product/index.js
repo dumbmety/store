@@ -11,7 +11,7 @@ function Product({ name, price, status, image, route, description }) {
 
   return (
     <li className={`product ${layout === 'list' && 'list'}`}>
-      <div>
+      <div className="image-wrapper">
         <Link to={`/product/${route}`} className="route" />
         <img className="image" src={`/images/${image}`} alt={name} />
       </div>

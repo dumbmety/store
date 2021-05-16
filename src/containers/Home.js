@@ -6,6 +6,7 @@ import Sidebar from '../components/Sidebar'
 import Header from '../components/Header'
 
 import LayoutContext from '../providers/layout'
+import Navbar from '../components/Navbar'
 
 function Home() {
   const [layout, setLayout] = useState('grid')
@@ -17,6 +18,7 @@ function Home() {
   return (
     <div className="flex">
       <Sidebar />
+      <Navbar />
       <Main>
         <LayoutContext.Provider value={{ layout, changeLayout }}>
           <Header />

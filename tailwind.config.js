@@ -1,6 +1,6 @@
 module.exports = {
   purge: ['./src/**/*.{js,jsx,ts,tsx}', './public/index.html'],
-  darkMode: false, // or 'media' or 'class'
+  darkMode: false,
   theme: {
     fontFamily: {
       sans: 'Manrope',
@@ -14,6 +14,7 @@ module.exports = {
         cool: '#E6E6EA',
         light: '#F1F1F4',
         white: '#FFFFFF',
+        orange: '#FF4A3B',
       },
     },
   },
