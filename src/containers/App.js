@@ -10,7 +10,7 @@ function App() {
     <Router>
       <Switch>
         <Route path="/product/:name" component={Product} />
-        <Route path="/auth" component={Auth} />
+        <Route path="/auth" exact component={Auth} />
         <Route path="/" exact component={Home} />
         <Route path="/cart" exact component={Cart} />
       </Switch>
