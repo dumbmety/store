@@ -1,16 +1,16 @@
 import './index.css'
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
-
 import products from '../../constants/products'
 
-function Product({ match }) {
+function Product() {
   const [product, setProduct] = useState({})
+  const params = useParams()
 
   useEffect(() => {
-    setProduct(products.find(p => p.route === match.params.name))
-  }, [setProduct, match.params.name])
+    setProduct(products.find(product => product.route === params.name))
+  }, [setProduct, params])
 
   return (
     <SimpleBar className="max-h-screen">

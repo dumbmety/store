@@ -11,7 +11,7 @@
 }
 
 .product-wrapper .image img {
-  @apply w-full;
+  @apply w-96;
 }
 
 .product-wrapper .details {

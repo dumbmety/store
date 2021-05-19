@@ -23,10 +23,10 @@ const Navbar = ({ quantity }) => {
           </Link>
           <ul className={classes.NavItems}>
             <li className={classes.NavItem}>
-              <Link to="/products">Products</Link>
+              <Link to="/">Products</Link>
             </li>
             <li className={classes.NavItem}>
-              <Link to="/offers">Offers</Link>
+              <Link to="/">Offers</Link>
             </li>
             <li className={classes.NavItem}>
               <Link to="/auth">Login</Link>
