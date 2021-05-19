@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
 
 import Login from '../../components/Auth/Login'
@@ -29,6 +30,9 @@ const Auth = () => {
 
   return (
     <SimpleBar className="max-h-screen">
+      <Link className={classes.BackToHome} to="/">
+        back to home
+      </Link>
       <div className={classes.app}>
         <div className={classes.login}>
           <div className={classes.container}>
