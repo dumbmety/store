@@ -8,7 +8,6 @@ import { connect } from 'react-redux'
 function Products(props) {
   const { layout } = useContext(LayoutContext)
   const { products } = props
-  console.log(products)
   return (
     <ul
       className={`products grid gap-4 ${
@@ -33,7 +32,7 @@ function Products(props) {
 }
 const mapStateToProps = state => {
   return {
-    products: state,
+    products: state.products,
   }
 }
 export default connect(mapStateToProps)(Products)
