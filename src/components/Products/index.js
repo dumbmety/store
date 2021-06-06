@@ -1,14 +1,14 @@
 import './style.css'
 import { useContext } from 'react'
 
-import products from '../../constants/products'
-
 import Product from './Product'
 import LayoutContext from '../../providers/layout'
+import { connect } from 'react-redux'
 
-function Products() {
+function Products(props) {
   const { layout } = useContext(LayoutContext)
-
+  const { products } = props
+  console.log(products)
   return (
     <ul
       className={`products grid gap-4 ${
@@ -31,5 +31,9 @@ function Products() {
     </ul>
   )
 }
-
-export default Products
+const mapStateToProps = state => {
+  return {
+    products: state,
+  }
+}
+export default connect(mapStateToProps)(Products)

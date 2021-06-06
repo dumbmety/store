@@ -5,14 +5,9 @@ import 'simplebar/dist/simplebar.min.css'
 import './styles/index.css'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
+import productsReducer from './redux/reducers/products'
 
-const initialState = ['test']
-
-const reducer = (state = initialState, action) => {
-  return state
-}
-
-const store = createStore(reducer)
+const store = createStore(productsReducer)
 
 ReactDOM.render(
   <Provider store={store}>

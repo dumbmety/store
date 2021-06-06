@@ -2,15 +2,17 @@ import './index.css'
 import { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
-import products from '../../constants/products'
+import { connect } from 'react-redux'
 
-function Product() {
+function Product(props) {
   const [product, setProduct] = useState({})
   const params = useParams()
 
+  // redux state
+  const { products } = props
   useEffect(() => {
     setProduct(products.find(product => product.route === params.name))
-  }, [setProduct, params])
+  }, [setProduct, params, products])
 
   return (
     <SimpleBar className="max-h-screen">
@@ -34,4 +36,10 @@ function Product() {
   )
 }
 
-export default Product
+const mapStateToProps = state => {
+  return {
+    products: state,
+  }
+}
+
+export default connect(mapStateToProps)(Product)
