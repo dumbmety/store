@@ -40,11 +40,11 @@
 }
 
 .product .info .description {
-  @apply w-full lg:w-5/6 flex-1 text-gray;
+  @apply w-full lg:w-5/6 flex-1 text-gray-500;
 }
 
 .product .info .price {
-  @apply text-gray;
+  @apply text-gray-500;
 }
 
 .product.list .info .details {

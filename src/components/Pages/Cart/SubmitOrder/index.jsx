@@ -1,18 +1,16 @@
 import { useHistory } from 'react-router-dom'
-import classes from './style.module.css'
+import styles from './style.module.css'
 
-const SubmitOrder = ({ TotalPrice }) => {
+function SubmitOrder({ TotalPrice }) {
   let history = useHistory()
-  const redirectToHome = () => {
-    history.push('/')
-  }
+
   return (
-    <section className={classes.SubmitOrder}>
-      <p className={classes.TotalPrice}>
+    <section className={styles.SubmitOrder}>
+      <p className={styles.TotalPrice}>
         Total Price:
         <span> ${TotalPrice}</span>
       </p>
-      <button onClick={redirectToHome} className={classes.OrderButton}>
+      <button onClick={() => history.push('/')} className={styles.OrderButton}>
         Order Now
       </button>
     </section>

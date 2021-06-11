@@ -1,10 +1,10 @@
+import styles from './style.module.css'
 import products from '../../../../../constants/products'
 import Order from './Order'
-import classes from './style.module.css'
 
-const Orders = () => {
+function Orders() {
   return (
-    <section className={classes.Orders}>
+    <section className={styles.Orders}>
       <ul>
         {products.map((product, index) => {
           if (index > 1) return false

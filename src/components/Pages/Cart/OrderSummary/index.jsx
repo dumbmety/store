@@ -1,10 +1,11 @@
+import styles from './style.module.css'
+
 import Orders from './Orders'
 import OrderSummaryTitle from './OrderSummaryTitle'
-import classes from './style.module.css'
 
-const OrderSummary = () => {
+function OrderSummary() {
   return (
-    <main className={classes.OrderSummary}>
+    <main className={styles.OrderSummary}>
       <OrderSummaryTitle />
       <Orders />
     </main>

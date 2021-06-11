@@ -4,21 +4,29 @@
 }
 
 .Nav {
-  @apply bg-cool lg:bg-white flex lg:block justify-between lg:justify-start items-center p-6 p-3 border-b-2 border-cool;
+  @apply bg-gray-50 flex lg:block justify-between lg:justify-start items-center px-6 py-3 border-b border-gray-100;
 }
+
+.NavLogo {
+  @apply text-2xl;
+}
+
 .NavItems {
   @apply flex-1 lg:flex-none;
 }
 
+.NavItem {
+  @apply cursor-pointer transition duration-200 ease-in-out select-none;
+}
+
 .NavItem:not(:last-child) {
-  @apply p-2 lg:p-0 px-6 lg:mr-6 text-lg text-gray lg:text-xl hover:bg-cool lg:hover:bg-white;
+  @apply p-2 lg:p-0 px-6 lg:mr-6 text-gray-500 hover:bg-white lg:hover:bg-transparent lg:hover:text-black;
 }
+
 .CartButton {
-  @apply p-2 mt-5 lg:mt-0 mx-6 lg:mx-1 px-2 flex items-center justify-start lg:justify-center bg-purple py-2 text-white lg:rounded-full text-sm cursor-pointer;
+  @apply py-2 px-6 lg:px-3 space-x-2 flex items-center justify-start lg:justify-center lg:rounded-full text-white bg-indigo-500 hover:bg-indigo-600;
 }
+
 .CartButton span {
-  @apply mr-1 text-xl;
-}
-.NavLogo {
-  @apply text-3xl font-medium;
+  @apply text-xl;
 }

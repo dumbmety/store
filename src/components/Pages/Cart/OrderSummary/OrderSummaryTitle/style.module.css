@@ -1,6 +1,7 @@
 .Title {
-  @apply flex text-3xl font-bold items-center pb-5
+  @apply flex text-2xl space-x-2 font-bold items-center;
 }
-.Title h1 {
-  @apply ml-2
+
+.Icon {
+  @apply w-8 h-8;
 }

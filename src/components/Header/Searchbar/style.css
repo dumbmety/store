@@ -2,7 +2,7 @@
   @apply relative;
 }
 .products-header__input {
-  @apply py-3 pl-11 w-72 pr-5 border-none outline-none focus:border-gray;
+  @apply py-3 pl-11 w-72 pr-5 border-none outline-none focus:border-gray-500;
 }
 .products-header__icon {
   @apply absolute w-6 h-6 top-3 left-2;

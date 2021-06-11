@@ -3,5 +3,5 @@
 }
 
 .category {
-  @apply py-3 px-6 block select-none text-gray hover:bg-cool;
+  @apply py-3 px-6 block select-none text-gray-500 hover:bg-cool;
 }

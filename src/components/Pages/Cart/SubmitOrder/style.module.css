@@ -1,14 +1,15 @@
 .SubmitOrder {
-  @apply flex flex-col container px-4 lg:px-0 items-end mx-auto mt-5;
+  @apply flex flex-col container px-4 lg:px-0 items-end mx-auto mt-5 mb-10;
 }
 
 .TotalPrice {
-  @apply flex items-center text-2xl lg:text-3xl font-medium;
+  @apply flex items-center text-lg lg:text-xl font-medium;
 }
 
 .TotalPrice span {
-  @apply text-3xl lg:text-4xl font-bold text-purple ml-1;
+  @apply text-2xl lg:text-3xl font-bold text-indigo-600 ml-1;
 }
+
 .OrderButton {
-  @apply bg-purple text-2xl text-white rounded-full mt-5 px-4 py-2 focus:outline-none;
+  @apply bg-indigo-500 hover:bg-indigo-600 text-lg text-white rounded-full mt-5 px-4 py-2 focus:outline-none;
 }

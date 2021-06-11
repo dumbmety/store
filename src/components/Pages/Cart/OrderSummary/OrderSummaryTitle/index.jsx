@@ -1,10 +1,10 @@
 import { ShoppingCartIcon } from '@heroicons/react/outline'
-import classes from './style.module.css'
+import styles from './style.module.css'
 
-const OrderSummaryTitle = () => {
+function OrderSummaryTitle() {
   return (
-    <header className={classes.Title}>
-      <ShoppingCartIcon className="w-10 h-10" />
+    <header className={styles.Title}>
+      <ShoppingCartIcon className={styles.Icon} />
       <h1>Order Summary</h1>
     </header>
   )

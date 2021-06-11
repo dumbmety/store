@@ -1,20 +1,23 @@
+import SimpleBar from 'simplebar-react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import Home from './Home'
-import Product from '../components/Product'
 import Auth from './Auth'
+import Product from '../components/Product'
 import Cart from '../components/Pages/Cart'
 
 function App() {
   return (
-    <Router>
-      <Switch>
-        <Route path="/product/:name" component={Product} />
-        <Route path="/auth" exact component={Auth} />
-        <Route path="/" exact component={Home} />
-        <Route path="/cart" exact component={Cart} />
-      </Switch>
-    </Router>
+    <SimpleBar className="max-h-screen">
+      <Router>
+        <Switch>
+          <Route path="/product/:name" component={Product} />
+          <Route path="/cart" component={Cart} />
+          <Route path="/auth" component={Auth} />
+          <Route path="/" exact component={Home} />
+        </Switch>
+      </Router>
+    </SimpleBar>
   )
 }
 
