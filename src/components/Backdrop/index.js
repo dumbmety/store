@@ -1,7 +1,11 @@
 import './style.css'
+import PropTypes from 'prop-types'
 
-const Backdrop = ({ show, setShow }) => {
-  return show && <div onClick={() => setShow(false)} className="backdrop"></div>
+export default function Backdrop({ show, setShow }) {
+  return show && <div className="backdrop" onClick={() => setShow(false)} />
 }
 
-export default Backdrop
+Backdrop.propTypes = {
+  show: PropTypes.bool,
+  setShow: PropTypes.func,
+}
