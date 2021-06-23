@@ -3,12 +3,15 @@
   transition: all ease 0.4s;
   @apply w-72 bg-light h-screen fixed top-0;
 }
+
 .sidedrawer.close {
   transform: translateX(-160%);
 }
+
 .sidedrawer.open {
   transform: translateX(0);
 }
+
 .sidedrawer .content {
   @apply flex flex-col h-screen;
 }

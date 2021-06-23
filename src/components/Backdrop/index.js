@@ -1,8 +1,8 @@
 import './style.css'
 import PropTypes from 'prop-types'
 
-export default function Backdrop({ show, setShow }) {
-  return show && <div className="backdrop" onClick={() => setShow(false)} />
+export default function Backdrop({ show, hideNavbar }) {
+  return show && <div className="backdrop" onClick={hideNavbar} />
 }
 
 Backdrop.propTypes = {

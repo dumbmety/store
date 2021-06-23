@@ -1,9 +1,9 @@
 import { ViewListIcon } from '@heroicons/react/outline'
-const Toggle = ({ setShow }) => {
+
+export default function Toggle({ showNavbar }) {
   return (
-    <div onClick={() => setShow(true)} className="cursor-pointer lg:hidden">
+    <div onClick={showNavbar} className="cursor-pointer lg:hidden">
       <ViewListIcon className="w-7 h-7" />
     </div>
   )
 }
-export default Toggle

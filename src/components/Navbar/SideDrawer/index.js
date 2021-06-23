@@ -1,18 +1,8 @@
 import './style.css'
-const SideDrawer = props => {
-  const { show, children} = props
 
-  let classes = ['sidedrawer', 'close'] //close: transform: translateX(-160%);
+export default function SideDrawer({ show, children }) {
+  let classes = ['sidedrawer', 'close']
+  if (show) classes = ['sidedrawer', 'open']
 
-  if (show) {
-    classes = ['sidedrawer', 'open'] //open: transform: translateX(0);
-  }
-
-  return (
-    <aside className={classes.join(' ')}>
-      {children}
-    </aside>
-  )
+  return <aside className={classes.join(' ')}>{children}</aside>
 }
-
-export default SideDrawer
