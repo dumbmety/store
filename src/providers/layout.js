@@ -1,8 +1,27 @@
-import { createContext } from 'react'
+import { createContext, useContext, useState } from 'react'
 
-const LayoutContext = createContext({
+const initialState = {
   layout: '',
   changeLayout: () => {},
-})
+}
 
-export default LayoutContext
+const LayoutContext = createContext(initialState)
+
+export const LayoutProvider = ({ children }) => {
+  const [layout, setLayout] = useState('grid')
+
+  function changeLayout(layout) {
+    setLayout(layout)
+  }
+
+  return (
+    <LayoutContext.Provider
+      value={{ layout, changeLayout }}
+      children={children}
+    />
+  )
+}
+
+export const useLayout = () => {
+  return useContext(LayoutContext)
+}

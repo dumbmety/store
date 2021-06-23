@@ -1,20 +1,17 @@
-import { useContext } from 'react'
 import { ViewGridIcon } from '@heroicons/react/outline'
+import { useLayout } from 'providers/layout'
 
-import LayoutContext from '../../../../providers/layout'
+export default function Grid() {
+  const { layout, changeLayout } = useLayout()
 
-const Grid = () => {
-  const { layout, changeLayout } = useContext(LayoutContext)
+  const classes = ['w-7 h-7 transition duration-200']
+  layout === 'grid' ? classes.push('text-black') : classes.push('text-cool')
+
+  const handleChangeLayout = () => changeLayout('grid')
 
   return (
-    <li onClick={() => changeLayout('grid')} className="mr-1 cursor-pointer">
-      <ViewGridIcon
-        className={`w-7 h-7 transition duration-200 ${
-          layout === 'grid' ? 'text-black' : 'text-cool'
-        }`}
-      />
+    <li onClick={handleChangeLayout} className="mr-1 cursor-pointer">
+      <ViewGridIcon className={classes.join(' ')} />
     </li>
   )
 }
-
-export default Grid

@@ -1,22 +1,23 @@
 import './style.css'
-import { useContext } from 'react'
-
-import Product from './Product'
-import LayoutContext from '../../providers/layout'
+import { useLayout } from 'providers/layout'
 import { connect } from 'react-redux'
+import Product from './Product'
 
 function Products(props) {
-  const { layout } = useContext(LayoutContext)
-  const { products } = props
+  const { layout } = useLayout()
+
+  const productGridClasses =
+    'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'
+  const productListClasses = 'grid-cols-1'
+
+  const productsClassess = ['products grid gap-4']
+  layout === 'grid'
+    ? productsClassess.push(productGridClasses)
+    : productsClassess.push(productListClasses)
+
   return (
-    <ul
-      className={`products grid gap-4 ${
-        layout === 'grid'
-          ? 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5'
-          : 'grid-cols-1'
-      }`}
-    >
-      {products.map(product => (
+    <ul className={productsClassess.join(' ')}>
+      {props.products.map(product => (
         <Product
           key={product.id}
           name={product.name}
@@ -30,9 +31,9 @@ function Products(props) {
     </ul>
   )
 }
-const mapStateToProps = state => {
-  return {
-    products: state.products,
-  }
-}
+
+const mapStateToProps = state => ({
+  products: state.products,
+})
+
 export default connect(mapStateToProps)(Products)

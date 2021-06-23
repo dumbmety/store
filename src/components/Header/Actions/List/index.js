@@ -1,20 +1,17 @@
-import { useContext } from 'react'
 import { ViewListIcon } from '@heroicons/react/outline'
+import { useLayout } from 'providers/layout'
 
-import LayoutContext from '../../../../providers/layout'
+export default function List() {
+  const { layout, changeLayout } = useLayout()
 
-const List = () => {
-  const { layout, changeLayout } = useContext(LayoutContext)
+  const classes = ['w-7 h-7 mr-4 transition duration-200']
+  layout === 'list' ? classes.push('text-black') : classes.push('text-cool')
+
+  const handleChangeLayout = () => changeLayout('list')
 
   return (
-    <li onClick={() => changeLayout('list')} className="mr-1 cursor-pointer">
-      <ViewListIcon
-        className={`w-7 h-7 mr-4 transition duration-200 ${
-          layout === 'list' ? 'text-black' : 'text-cool'
-        }`}
-      />
+    <li onClick={handleChangeLayout} className="mr-1 cursor-pointer">
+      <ViewListIcon className={classes.join(' ')} />
     </li>
   )
 }
-
-export default List
