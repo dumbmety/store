@@ -1,11 +1,12 @@
 import ReactDOM from 'react-dom'
+import App from 'containers/App'
+import productsReducer from 'redux/reducers/products'
 
-import App from './containers/App'
 import 'simplebar/dist/simplebar.min.css'
-import './styles/index.css'
-import { Provider } from 'react-redux'
+import 'styles/index.css'
+
 import { createStore } from 'redux'
-import productsReducer from './redux/reducers/products'
+import { Provider } from 'react-redux'
 
 const store = createStore(productsReducer)
 

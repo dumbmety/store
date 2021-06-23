@@ -1,8 +1,13 @@
 {
   "name": "store",
-  "version": "0.1.0",
-  "license": "ISC",
-  "private": true,
+  "version": "0.2.0",
+  "license": "MIT",
+  "prettier": {
+    "arrowParens": "avoid",
+    "semi": false,
+    "singleQuote": true,
+    "useTabs": false
+  },
   "scripts": {
     "start": "craco start",
     "build": "craco build",

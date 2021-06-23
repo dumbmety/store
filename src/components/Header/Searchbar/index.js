@@ -1,7 +1,8 @@
+import './style.css'
 import { SearchIcon } from '@heroicons/react/outline'
 import { connect } from 'react-redux'
-import * as actionTypes from '../../../redux/actions/actions'
-import './style.css'
+import * as actionTypes from 'redux/actions'
+
 const searchbar = props => {
   const { searchHandler } = props
   return (

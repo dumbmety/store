@@ -1,19 +1,15 @@
 import { useState } from 'react'
 
-import Main from '../components/Main'
-import Products from '../components/Products'
-import Sidebar from '../components/Sidebar'
-import Header from '../components/Header'
+import Main from 'components/Main'
+import Products from 'components/Products'
+import Sidebar from 'components/Sidebar'
+import Header from 'components/Header'
+import Navbar from 'components/Navbar'
+import LayoutContext from 'providers/layout'
 
-import LayoutContext from '../providers/layout'
-import Navbar from '../components/Navbar'
-
-function Home() {
+export default function Home() {
   const [layout, setLayout] = useState('grid')
-
-  function changeLayout(layout) {
-    setLayout(layout)
-  }
+  const changeLayout = layout => setLayout(layout)
 
   return (
     <div className="flex">
@@ -28,5 +24,3 @@ function Home() {
     </div>
   )
 }
-
-export default Home

@@ -1,12 +1,13 @@
 import SimpleBar from 'simplebar-react'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+import Product from 'components/Product'
+import Cart from 'components/Pages/Cart'
+
 import Home from './Home'
 import Auth from './Auth'
-import Product from '../components/Product'
-import Cart from '../components/Pages/Cart'
 
-function App() {
+export default function App() {
   return (
     <SimpleBar className="max-h-screen">
       <Router>
@@ -20,5 +21,3 @@ function App() {
     </SimpleBar>
   )
 }
-
-export default App

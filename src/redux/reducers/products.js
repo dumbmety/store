@@ -1,5 +1,5 @@
-import PRODUCTS from '../../constants/products'
-import * as actionTypes from '../actions/actions'
+import PRODUCTS from 'constants/products'
+import * as actionTypes from 'redux/actions'
 
 const initialState = { products: [...PRODUCTS] }
 
@@ -17,8 +17,8 @@ const productsReducer = (state = initialState, action) => {
         products: filtredProducts,
       }
     default:
+      return state
   }
-  return state
 }
 
 export default productsReducer
