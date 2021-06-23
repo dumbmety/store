@@ -1,27 +1,25 @@
 import { useEffect, useState, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import SimpleBar from 'simplebar-react'
+import Login from 'components/Auth/Login'
+import Signup from 'components/Auth/Signup'
+import styles from './style.module.css'
 
-import Login from '../../components/Auth/Login'
-import Signup from '../../components/Auth/Signup'
-
-import classes from './style.module.css'
-
-const Auth = () => {
+export default function Auth() {
   const [activeTab, setActiveTab] = useState('login')
   const rightSide = useRef(null)
 
   useEffect(() => {
-    rightSide.current.classList.add(classes.right)
+    rightSide.current.classList.add(styles.right)
   }, [])
 
   const changeState = () => {
     if (activeTab === 'login') {
-      rightSide.current.classList.remove(classes.right)
-      rightSide.current.classList.add(classes.left)
+      rightSide.current.classList.remove(styles.right)
+      rightSide.current.classList.add(styles.left)
     } else {
-      rightSide.current.classList.remove(classes.left)
-      rightSide.current.classList.add(classes.right)
+      rightSide.current.classList.remove(styles.left)
+      rightSide.current.classList.add(styles.right)
     }
 
     const tab = activeTab === 'login' ? 'signup' : 'login'
@@ -30,17 +28,18 @@ const Auth = () => {
 
   return (
     <SimpleBar className="max-h-screen">
-      <Link className={classes.BackToHome} to="/">
-        back to home
+      <Link className={styles.backToHome} to="/">
+        Back to home
       </Link>
-      <div className={classes.app}>
-        <div className={classes.login}>
-          <div className={classes.container}>
+
+      <div className={styles.app}>
+        <div className={styles.login}>
+          <div className={styles.container}>
             {activeTab === 'login' ? <Login /> : <Signup />}
           </div>
           <RightSide
             text={activeTab === 'login' ? 'Signup' : 'Login'}
-            click={changeState}
+            onClick={changeState}
             rightSideRef={rightSide}
           />
         </div>
@@ -49,14 +48,12 @@ const Auth = () => {
   )
 }
 
-const RightSide = ({ text, click, rightSideRef }) => {
+function RightSide({ text, onClick, rightSideRef }) {
   return (
-    <div className={classes.rightSide} ref={rightSideRef} onClick={click}>
+    <div className={styles.rightSide} ref={rightSideRef} onClick={onClick}>
       <div>
-        <div className={classes.text}>{text}</div>
+        <div className={styles.text}>{text}</div>
       </div>
     </div>
   )
 }
-
-export default Auth

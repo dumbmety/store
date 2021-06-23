@@ -1,9 +1,11 @@
 .app {
   @apply h-screen flex items-center justify-center;
 }
-.BackToHome {
+
+.backToHome {
   @apply bg-white inline-block m-5 shadow px-4 py-1 text-xl rounded-lg select-none;
 }
+
 .login {
   @apply flex items-center justify-center mt-2 relative z-30 transition-all ease-in-out duration-300;
   width: 27em;
