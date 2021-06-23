@@ -1,9 +1,8 @@
 import './style.css'
-
 import Actions from './Actions'
 import Searchbar from './Searchbar'
 
-function Header() {
+export default function Header() {
   return (
     <header className="products-header">
       <Searchbar />
@@ -11,5 +10,3 @@ function Header() {
     </header>
   )
 }
-
-export default Header

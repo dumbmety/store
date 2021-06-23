@@ -1,9 +1,8 @@
 import './style.css'
-
 import Grid from './Grid'
 import List from './List'
 
-function Actions() {
+export default function Actions() {
   return (
     <nav className="hidden md:flex product-header__actions">
       <ul>
@@ -13,5 +12,3 @@ function Actions() {
     </nav>
   )
 }
-
-export default Actions

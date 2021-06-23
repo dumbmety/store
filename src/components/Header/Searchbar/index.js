@@ -3,8 +3,7 @@ import { SearchIcon } from '@heroicons/react/outline'
 import { connect } from 'react-redux'
 import * as actionTypes from 'redux/actions'
 
-const searchbar = props => {
-  const { searchHandler } = props
+const SearchBar = ({ searchHandler }) => {
   return (
     <div className="products-header__searchbar">
       <input
@@ -18,12 +17,9 @@ const searchbar = props => {
   )
 }
 
-const mapDispatchToProps = dispatch => {
-  const { SEARCH_PRODUCT } = actionTypes
-  return {
-    searchHandler: e =>
-      dispatch({ type: SEARCH_PRODUCT, inputValue: e.target.value }),
-  }
-}
+const mapDispatchToProps = dispatch => ({
+  searchHandler: e =>
+    dispatch({ type: actionTypes.SEARCH_PRODUCT, inputValue: e.target.value }),
+})
 
-export default connect(null, mapDispatchToProps)(searchbar)
+export default connect(null, mapDispatchToProps)(SearchBar)
