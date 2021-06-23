@@ -1,33 +1,34 @@
 import { useFormik } from 'formik'
-import classes from './style.module.css'
+import styles from './style.module.css'
 
 const validate = values => {
   const errors = {}
 
-  // validate username field
+  // User Name
   if (!values.username) {
     errors.username = 'Required'
   } else if (values.username.length < 4) {
     errors.username = 'Must be 5 characters or more'
   }
 
-  // validate email field
+  // Email
   if (!values.email) {
     errors.email = 'Required'
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Invalid email address'
   }
 
-  // validate password field
+  // Password
   if (!values.password) {
     errors.password = 'Required'
   } else if (values.password.length < 8) {
     errors.password = 'Must be 9 characters or more'
   }
+
   return errors
 }
 
-const Signup = () => {
+export default function Signup() {
   const formik = useFormik({
     initialValues: {
       username: '',
@@ -38,22 +39,22 @@ const Signup = () => {
   })
 
   return (
-    <section className={classes.AuthContainer}>
-      <header className={classes.Header}>
+    <section className={styles.AuthContainer}>
+      <header className={styles.Header}>
         <h1>SignUp</h1>
       </header>
-      <div className={classes.Content}>
-        <div className={classes.Image}>
+      <div className={styles.Content}>
+        <div className={styles.Image}>
           <img src="/images/auth.svg" alt="Authentication" />
         </div>
         <form
-          className={classes.Form}
+          className={styles.Form}
           onSubmit={e => {
             e.preventDefault()
             formik.handleSubmit()
           }}
         >
-          <div className={classes.FormGroup}>
+          <div className={styles.FormGroup}>
             <label htmlFor="username">Username</label>
             <input
               type="text"
@@ -63,13 +64,13 @@ const Signup = () => {
               value={formik.values.username}
               onChange={formik.handleChange}
             />
-            {formik.touched.username && formik.errors.username ? (
-              <div className={classes.ErrorMessage}>
+            {formik.touched.username && formik.errors.username && (
+              <div className={styles.ErrorMessage}>
                 {formik.errors.username}
               </div>
-            ) : null}
+            )}
           </div>
-          <div className={classes.FormGroup}>
+          <div className={styles.FormGroup}>
             <label htmlFor="email">Email</label>
             <input
               type="email"
@@ -79,11 +80,11 @@ const Signup = () => {
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
-            {formik.touched.email && formik.errors.email ? (
-              <div className={classes.ErrorMessage}>{formik.errors.email}</div>
-            ) : null}
+            {formik.touched.email && formik.errors.email && (
+              <div className={styles.ErrorMessage}>{formik.errors.email}</div>
+            )}
           </div>
-          <div className={classes.FormGroup}>
+          <div className={styles.FormGroup}>
             <label htmlFor="password">Password</label>
             <input
               type="password"
@@ -93,13 +94,13 @@ const Signup = () => {
               onBlur={formik.handleBlur}
               onChange={formik.handleChange}
             />
-            {formik.touched.password && formik.errors.password ? (
-              <div className={classes.ErrorMessage}>
+            {formik.touched.password && formik.errors.password && (
+              <div className={styles.ErrorMessage}>
                 {formik.errors.password}
               </div>
-            ) : null}
+            )}
           </div>
-          <div className={classes.FormGroup}>
+          <div className={styles.FormGroup}>
             <button type="submit">Sign up</button>
           </div>
         </form>
@@ -107,5 +108,3 @@ const Signup = () => {
     </section>
   )
 }
-
-export default Signup
